@@ -5,7 +5,7 @@ It consists of 5 Convolutional Neural Networks followed by 3 Dense Neural Networ
 
 Input size: 80 , 160 , 3
 ____________________________________________________________________________________________________
-Layer (type)                     Output Shape          Param #     Connected to                     
+Layer (type)                     Output Shape          Param n.o     Connected to                     
 ====================================================================================================
 convolution2d_47 (Convolution2D) (None, 38, 78, 24)    1824        convolution2d_input_16[0][0]     
 ____________________________________________________________________________________________________
