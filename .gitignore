@@ -1,4 +1,5 @@
 .gitignore~
+*~
 train.p
 test.p
 other_resources/
