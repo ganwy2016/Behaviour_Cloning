@@ -20,12 +20,7 @@ sio = socketio.Server()
 app = Flask(__name__)
 model = None
 prev_image_array = None
-  
-def normalise(im):
-    width,height = im.size
-    im = np.array(im.resize((round(width*0.5),round(height*0.5)), Image.ANTIALIAS)) # reduce to half size
-    im = im/255 - 0.5 # normalise data
-    return im
+
 
 @sio.on('telemetry')
 def telemetry(sid, data):
@@ -38,7 +33,6 @@ def telemetry(sid, data):
     # The current image from the center camera of the car
     imgString = data["image"]
     image = Image.open(BytesIO(base64.b64decode(imgString)))
-    image = normalise(image)
     image_array = np.asarray(image)
     transformed_image_array = image_array[None, :, :, :]
     
