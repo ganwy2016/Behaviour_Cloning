@@ -77,9 +77,9 @@ fc3 (Dense)                      (None, 10)            510         dropout_31[0]
 ____________________________________________________________________________________________________
 batchnormalization_59 (BatchNorm (None, 10)            20          fc3[0][0]                        
 ____________________________________________________________________________________________________
-activation_87 (Activation)       (None, 10)            0           batchnormalization_59[0][0]      
+activation_87 (Activation)       (None, 10)            0           batchnormalization_59[0][0]
 ____________________________________________________________________________________________________
-output (Dense)                   (None, 1)             11          activation_87[0][0]              
+output (Dense)                   (None, 1)             11          activation_87[0][0]      
 ====================================================================================================
 Total params: 713811
 
@@ -90,10 +90,18 @@ Dropout layers were included to prevent over-fitting and increase robustness. Re
 The original dataset provided by Udacity was used to train the neural network.
 When running an initial experiment using all the dataset, the trained model was driving the car off the road. 
 After a careful and detailed analysis of the dataset, it was realised that there were too many samples centred around steering = 0 and too few at extreme regions (-1.0 and 1).
+
+![alt tab](original_dataset.png "Original dataset")
+![alt tab](final_dataset.png "Final dataset")
+
 The key method to make the car stay on the track was to remove the excess of training data in the centre region and add copies of data at extreme regions, by shifting the images captured by the center camera both to the left and to the right and correcting the steering accordingly.
 The images were also reduced to half the size in order to make the training steps faster and normalised between -0.5 and 0.5.
 
 All images were cropped in order to eliminate useless information (car and sky) which also contributes to speed up the training process.
+
+![alt tab](original_image.png "Original image")
+![alt tab](cropped_image.png "Cropped image")
+
 The original dataset comprised 8036 color images with size 320x160. The final dataset comprised 11174 color images with size 300x80.
 The distribution of the samples is much broader in the new set compared to the original one which means that training is much more effective.
 
