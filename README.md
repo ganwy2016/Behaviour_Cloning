@@ -2,10 +2,12 @@
 
 ![Behaviour Cloning](BehaviourCloning.png)
 
-To run the simulation:
+#### Video output: ![Behaviour Cloning](https://youtu.be/5WepQkkDnzQ)
+
+####To run the simulation:
 1) Activate conda environment with Tensor Flow libraries or use an apropriate docker image
    a) conda environment
-    Follow instructions from [here|https://github.com/udacity/CarND-Term1-Starter-Kit/blob/master/doc/configure_via_anaconda.md]
+    Follow instructions from ![here](https://github.com/udacity/CarND-Term1-Starter-Kit/blob/master/doc/configure_via_anaconda.md)
    b) docker image
    docker pull udacity/carnd-term1-starter-kit
    docker run -it --rm -p 4567:4567 -v ~/Udacity_Self_Driving_Car_ND/Term1/Behavorial_Cloning:/src udacity/carnd-term1-starter-kit /bin/bash
