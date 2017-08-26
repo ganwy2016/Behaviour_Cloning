@@ -4,7 +4,7 @@
 
 #### Video output: ![Behaviour Cloning](https://youtu.be/5WepQkkDnzQ)
 
-####To run the simulation:
+#### To run the simulation:
 1) Activate conda environment with Tensor Flow libraries or use an apropriate docker image
    a) conda environment
     Follow instructions from ![here](https://github.com/udacity/CarND-Term1-Starter-Kit/blob/master/doc/configure_via_anaconda.md)
