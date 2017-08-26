@@ -1,7 +1,8 @@
 # behavorial_cloning
 
 To run the simulation:
-1) Start the simulator on autonomous mode track 1 and then run:
+1) Activate conda environment with Tensor Flow libraries or use an apropriate docker image
+2) Start the simulator on autonomous mode track 1 and then run:
    python drive.py model.json
 -----------------------------------------------------------------------------------------------------------------------
 
